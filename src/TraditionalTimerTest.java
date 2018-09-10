@@ -6,6 +6,7 @@ public class TraditionalTimerTest {
 
     /**
      * 定时器
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -31,9 +32,9 @@ public class TraditionalTimerTest {
 
         class MyYImerTask extends TimerTask {
             @Override
-            public void run(){
+            public void run() {
                 System.out.println("bombing!");
-                new Timer().schedule(new MyYImerTask(),3000);
+                new Timer().schedule(new MyYImerTask(), 3000);
             }
         }
     }
