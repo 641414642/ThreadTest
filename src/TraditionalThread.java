@@ -1,10 +1,7 @@
 public class TraditionalThread {
 
-
-
-
     /**
-     *
+     * 多线程
      * @param args
      */
     public static void main(String[] args){
