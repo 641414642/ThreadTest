@@ -2,23 +2,24 @@ public class TraditionalThread {
 
     /**
      * 多线程
+     *
      * @param args
      */
-    public static void main(String[] args){
+    public static void main(String[] args) {
         /**
          * 重写Thread对象的run方法
          */
-        Thread thread = new Thread(){
+        Thread thread = new Thread() {
             @Override
             public void run() {
-                while (true){
+                while (true) {
                     try {
                         Thread.sleep(500);
-                    }catch (InterruptedException e) {
+                    } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
 
-                    System.out.println("1:"+ Thread.currentThread().getName());
+                    System.out.println("1:" + Thread.currentThread().getName());
                     System.out.println("1:" + this.getName());
                 }
             }
@@ -32,14 +33,14 @@ public class TraditionalThread {
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
-                while (true){
+                while (true) {
                     try {
                         Thread.sleep(500);
-                    }catch (InterruptedException e) {
+                    } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
 
-                    System.out.println("2:"+ Thread.currentThread().getName());
+                    System.out.println("2:" + Thread.currentThread().getName());
                     //System.out.println("2;" + this.getName());
                 }
             }
@@ -54,30 +55,30 @@ public class TraditionalThread {
                 new Runnable() {
                     @Override
                     public void run() {
-                        while (true){
+                        while (true) {
                             try {
                                 Thread.sleep(500);
-                            }catch (InterruptedException e) {
+                            } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
 
-                            System.out.println("runnable:"+ Thread.currentThread().getName());
+                            System.out.println("runnable:" + Thread.currentThread().getName());
                             //System.out.println("2;" + this.getName());
-                     }
+                        }
                     }
                 }
 
-        ){
+        ) {
             @Override
             public void run() {
-                while (true){
+                while (true) {
                     try {
                         Thread.sleep(500);
-                    }catch (InterruptedException e) {
+                    } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
 
-                    System.out.println("Thread:"+ Thread.currentThread().getName());
+                    System.out.println("Thread:" + Thread.currentThread().getName());
                     //System.out.println("2;" + this.getName());
                 }
             }
